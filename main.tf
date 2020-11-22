@@ -4,7 +4,7 @@ provider aws {
 }
 resource aws_instance "myec2" {
   ami        = data.aws_ami.latest-ubuntu.id
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
 }
 data "aws_ami" "latest-ubuntu" {
 most_recent = true
